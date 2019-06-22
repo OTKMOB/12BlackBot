@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var playerNum = 0;
+var playerArr = {};
 var askTime = 0;
  
 
@@ -16,6 +17,11 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if (message.content === '今天的十二黑打完了') {
+        
+        for( player of playerArr) {
+            player.signedUp = false;
+        }
+
         message.channel.send('晚安');
         playerNum = 0;
     }
@@ -28,6 +34,9 @@ client.on('message', message => {
         
         else {
             message.author.signedUp = true;
+            if(playerArr.indexOf(message.author) === -1) {
+                playerArr.push(message.author);
+            }
             playerNum++;    
             message.channel.send(`现在已经有${playerNum}个人要打十二黑了`);
        }

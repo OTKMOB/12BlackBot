@@ -16,9 +16,13 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
+    if (message.content === '!12help') {
+        message.channel.send('https://github.com/YundingWu/12BlackBot/blob/master/README.md');
+    }
+
     if (message.content === '今天的十二黑打完了') {
 
-        for( player of playerArr) {
+        for( player of playerArr ) {
             player.signedUp = false;
         }
 
@@ -43,7 +47,7 @@ client.on('message', message => {
     }
 
     if(message.content === '我不打十二黑了') {
-        
+
         if(message.author.signedUp === undefined) {
             message.author.signedUp = false;
         }

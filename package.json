@@ -1,11 +1,11 @@
 {
-    "name": "Example",
+    "name": "12 Black Bot",
   
-    "description": "Example",
+    "description": "12 Black",
   
     "version": "0.0.0",
   
-    "main": "bot.js",
+    "main": "12Bbot.js",
   
     "scripts": {
   

@@ -54,14 +54,10 @@ client.on('message', message => {
         if (askTime === 0 || 
             currentTime - askTime >= 1800 ) {
             askTime = Math.round(new Date() / 1000);
-            message.channel.send(`@everyone 有无十二黑，现在已有${playerNum}个人想打十二黑`);
+            message.channel.send(`@everyone 有无十二黑`);
         }
 
-        else {
-            message.channel.send(`现在已有${playerNum}个人想打十二黑`);
-        }
-
-        message.channel.send('回复“我要打十二黑”来报名');
+        message.channel.send('现在已有${playerNum}个人想打十二黑，回复“我要打十二黑”来报名');
        }
 
 });

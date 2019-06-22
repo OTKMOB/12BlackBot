@@ -3,11 +3,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var playerNum = 0;
+var askTime = 0;
  
 
 client.on('ready', () => {
 
-    console.log('I am ready!');
+    console.log('我准备好打十二黑了');
+    client.user.setActivity("等十二黑");
 
 });
 
@@ -38,6 +40,19 @@ client.on('message', message => {
             message.channel.send(`现在还有${playerNum}个人要打十二黑`);
         }
     }
+
+    if(message.content === '有无十二黑' ||
+       message.content === '有无12黑') {
+
+        var currentTime = Math.round(new Date() / 1000);
+        if (askTime === 0 || 
+            currentTime - askTime < 1800 ) {
+            askTime = Math.round(new Date() / 1000);
+            message.channel.send('@everyone 有无十二黑');
+        }
+
+        message.reply(`现在有${playerNum}个人想打十二黑`);
+       }
 
 });
 

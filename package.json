@@ -1,24 +1,13 @@
 {
-    "name": "12 Black Bot",
-  
-    "description": "12 Black",
-  
-    "version": "0.0.0",
-  
-    "main": "12Bbot.js",
-  
-    "scripts": {
-  
-      "start": "node bot.js"
-  
-    },
-  
-    "dependencies": {
-  
-      "discord.js": "11.1.0",
-  
-      "request": "2.81.0"
-  
-    }
-  
+  "name": "12 Black Bot",
+  "description": "12 Black",
+  "version": "0.0.0",
+  "main": "12Bbot.js",
+  "scripts": {
+    "start": "node 12Bbot.js"
+  },
+  "dependencies": {
+    "discord.js": "11.5.1",
+    "request": "2.81.0"
   }
+}

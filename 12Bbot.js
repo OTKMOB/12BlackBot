@@ -46,7 +46,7 @@ client.on('message', message => {
 
         var currentTime = Math.round(new Date() / 1000);
         if (askTime === 0 || 
-            currentTime - askTime < 1800 ) {
+            currentTime - askTime >= 1800 ) {
             askTime = Math.round(new Date() / 1000);
             message.channel.send('@everyone 有无十二黑');
         }

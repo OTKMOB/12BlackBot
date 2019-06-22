@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var playerNum = 0;
-var playerArr = {};
+var playerArr = [];
 var askTime = 0;
  
 
@@ -17,7 +17,7 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if (message.content === '今天的十二黑打完了') {
-        
+
         for( player of playerArr) {
             player.signedUp = false;
         }

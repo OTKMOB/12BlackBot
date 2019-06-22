@@ -15,7 +15,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.console === '今天的十二黑打完了') {
+    if (message.content === '今天的十二黑打完了') {
         message.channel.send('晚安');
         playerNum = 0;
     }

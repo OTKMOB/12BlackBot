@@ -43,7 +43,10 @@ client.on('message', message => {
     }
 
     if(message.content === '我不打十二黑了') {
-        console.log(message.author.signedUp);
+        
+        if(message.author.signedUp === undefined) {
+            message.author.signedUp = false;
+        }
         
         if(message.author.signedUp === false) {
             message.reply("你本来就不打");

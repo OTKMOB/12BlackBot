@@ -17,7 +17,8 @@ client.on('message', message => {
 
     if (message.content === '我要打十二黑') {
 
-       message.reply(`现在已经有${playerNum}个人要打十二黑了`);
+        playerNum++;    
+        message.reply(`现在已经有${playerNum}个人要打十二黑了`);
 
        }
 

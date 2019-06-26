@@ -6,6 +6,9 @@ const client = new Discord.Client();
 var playerNum = 0;
 var playerArr = [];
 var askTime = 0;
+
+nsfw = client.channels.get('545441874148851722');
+perfect = client.channels.get('575581539241426944');
  
 
 client.on('ready', () => {
@@ -83,8 +86,7 @@ client.on('message', message => {
         message.reply('你说的对');
     }
 
-    if(message.content === '!gkd') {
-        nsfw = client.channels.get('545441874148851722');
+    if(message.content === '!ow') {
         if (message.channel != nsfw) {
             message.reply('图片已发送到NSFW频道');
         }
@@ -97,8 +99,20 @@ client.on('message', message => {
         });
     }
 
+    if(message.content === '!hentai') {
+        if (message.channel != nsfw) {
+            message.reply('图片已发送到NSFW频道');
+        }
+        randomPic('hentai')
+        .then(url => {
+            nsfw.send(url);
+        })
+        .catch(error => {
+            nsfw.send('获取图片失败');
+        });
+    }
+
     if(message.content === '!aww') {
-        perfect = client.channels.get('575581539241426944');
         if (message.channel != perfect) {
             message.reply('图片已发送到perfect things频道');
         }

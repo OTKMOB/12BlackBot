@@ -1,13 +1,14 @@
 {
   "name": "12blackbot",
   "description": "我是一个没有感情的只知道打十二黑的bot",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "main": "12Bbot.js",
   "scripts": {
     "start": "node 12Bbot.js"
   },
   "dependencies": {
     "discord.js": "11.5.1",
+    "random-puppy": "^1.1.0",
     "request": "2.81.0"
   }
 }

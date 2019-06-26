@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const randomPic = require('random-puppy');
 
 const client = new Discord.Client();
 
@@ -82,6 +83,16 @@ client.on('message', message => {
         message.reply('你说的对');
     }
 
+    if(message.content.includes('gkd') && message.isMentioned("591830068162985993")) {
+        client.channel.get('545441874148851722').send(
+            randomPuppy()
+                .then(url => {
+                    console.log(url);
+                })
+                .catch(error => {
+                    console.log('获取图片失败');
+                }));
+        }
 });
 
  

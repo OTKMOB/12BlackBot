@@ -84,7 +84,7 @@ client.on('message', message => {
         message.reply('你说的对');
     }
 
-    if(message.content === '!ow') {
+    if(message.content === '!gkd') {
         nsfw = client.channels.get('545441874148851722');
         if (message.channel != nsfw) {
             message.reply('图片已发送到NSFW频道');

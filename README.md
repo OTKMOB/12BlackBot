@@ -4,7 +4,7 @@
 
 Version: 1.3.0
 新增指令:
-1. "!aww": 随机从r/aww发一张图到perfect-things频道  
+1. "!aww": 随机从r/aww(各种小动物)发一张图到perfect-things频道  
 
 修改指令:  
 1. "@12黑bot + 包含"gkd"的信息" 修改为 "!gkd"

@@ -2,8 +2,11 @@
 
 我是一个没有感情的只知道打十二黑的bot  
 
-Version: 1.0.5
+Version 1.2.0  
+新增指令：  
+1. @12黑bot + 包含“gkd“的信息：随机从r/Overwatch_Porn发一张图到NSFW频道  
 
+Version: 1.1.0  
 新增指令：
 1. 包含”对不对“，回复”你说的对“
 

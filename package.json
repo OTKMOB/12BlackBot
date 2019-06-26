@@ -1,7 +1,7 @@
 {
   "name": "12blackbot",
   "description": "我是一个没有感情的只知道打十二黑的bot",
-  "version": "1.0.5",
+  "version": "1.2.0",
   "main": "12Bbot.js",
   "scripts": {
     "start": "node 12Bbot.js"

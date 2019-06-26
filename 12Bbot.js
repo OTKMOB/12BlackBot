@@ -11,7 +11,7 @@ var askTime = 0;
 client.on('ready', () => {
 
     console.log('我准备好打十二黑了');
-    client.user.setActivity("等十二黑");
+    client.user.setActivity("等12黑");
 
 });
 

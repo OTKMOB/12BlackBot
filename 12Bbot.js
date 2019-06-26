@@ -84,14 +84,18 @@ client.on('message', message => {
     }
 
     if(message.content.includes('gkd') && message.isMentioned("591830068162985993")) {
-        randomPic()
+        nsfw = client.channels.get('545441874148851722');
+        if (message.channel != nsfw) {
+            message.reply('图片已发送到NSFW频道');
+        }
+        randomPic('r/Overwatch_Porn')
         .then(url => {
             client.channels.get('545441874148851722').send(url);
         })
         .catch(error => {
             client.channels.get('545441874148851722').send('获取图片失败');
         });
-        }
+    }
 });
 
  

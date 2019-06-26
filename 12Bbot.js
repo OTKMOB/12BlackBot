@@ -85,7 +85,7 @@ client.on('message', message => {
 
     if(message.content.includes('gkd') && message.isMentioned("591830068162985993")) {
         client.channels.get('545441874148851722').send(
-            randomPuppy()
+            randomPic()
                 .then(url => {
                     console.log(url);
                 })

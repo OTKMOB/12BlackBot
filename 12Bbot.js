@@ -7,8 +7,6 @@ var playerNum = 0;
 var playerArr = [];
 var askTime = 0;
 
-nsfw = client.channels.get('545441874148851722');
-perfect = client.channels.get('575581539241426944');
  
 
 client.on('ready', () => {
@@ -87,6 +85,7 @@ client.on('message', message => {
     }
 
     if(message.content === '!ow') {
+        nsfw = client.channels.get('545441874148851722');
         if (message.channel != nsfw) {
             message.reply('图片已发送到NSFW频道');
         }
@@ -100,6 +99,7 @@ client.on('message', message => {
     }
 
     if(message.content === '!hentai') {
+        nsfw = client.channels.get('545441874148851722');
         if (message.channel != nsfw) {
             message.reply('图片已发送到NSFW频道');
         }
@@ -113,6 +113,7 @@ client.on('message', message => {
     }
 
     if(message.content === '!aww') {
+        perfect = client.channels.get('575581539241426944');
         if (message.channel != perfect) {
             message.reply('图片已发送到perfect things频道');
         }

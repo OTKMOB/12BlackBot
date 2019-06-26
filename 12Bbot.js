@@ -88,7 +88,7 @@ client.on('message', message => {
         if (message.channel != nsfw) {
             message.reply('图片已发送到NSFW频道');
         }
-        randomPic('r/Overwatch_Porn')
+        randomPic('Overwatch_Porn')
         .then(url => {
             client.channels.get('545441874148851722').send(url);
         })
@@ -97,7 +97,6 @@ client.on('message', message => {
         });
     }
 });
-
  
 
 // THIS  MUST  BE  THIS  WAY

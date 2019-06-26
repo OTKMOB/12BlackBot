@@ -4,9 +4,6 @@
 
 ## Update History
 
-* 1.4.0
-    * 新增: "!hentai": 随机从r/hentai发一张图到NSFW频道.
-    * 修改: "!gkd" 修改为 "!ow"
 * 1.3.0
     * 新增: "!aww": 随机从r/aww(各种小动物)发一张图到perfect-things频道.
     * 修改: "@12黑bot + 包含"gkd"的信息" 修改为 "!gkd".

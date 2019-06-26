@@ -77,6 +77,11 @@ client.on('message', message => {
         message.channel.send(`现在已有${playerNum}个人想打十二黑，回复“我要打十二黑”来报名`);
        }
 
+    if(message.content.includes('对不对')) {
+
+        message.reply('你说的对');
+    }
+
 });
 
  

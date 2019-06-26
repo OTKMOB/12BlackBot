@@ -83,17 +83,31 @@ client.on('message', message => {
         message.reply('你说的对');
     }
 
-    if(message.content.includes('gkd') && message.isMentioned("591830068162985993")) {
+    if(message.content === '!gkd') {
         nsfw = client.channels.get('545441874148851722');
         if (message.channel != nsfw) {
             message.reply('图片已发送到NSFW频道');
         }
         randomPic('Overwatch_Porn')
         .then(url => {
-            client.channels.get('545441874148851722').send(url);
+            nsfw.send(url);
         })
         .catch(error => {
-            client.channels.get('545441874148851722').send('获取图片失败');
+            nsfw.send('获取图片失败');
+        });
+    }
+
+    if(message.content === '!aww') {
+        perfect = client.channels.get('575581539241426944');
+        if (message.channel != perfect) {
+            message.reply('图片已发送到perfect things频道');
+        }
+        randomPic('aww')
+        .then(url => {
+            perfect.send(url);
+        })
+        .catch(error => {
+            perfect.send('获取图片失败');
         });
     }
 });

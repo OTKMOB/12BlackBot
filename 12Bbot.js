@@ -84,14 +84,13 @@ client.on('message', message => {
     }
 
     if(message.content.includes('gkd') && message.isMentioned("591830068162985993")) {
-        client.channels.get('545441874148851722').send(
-            randomPic()
-                .then(url => {
-                    console.log(url);
-                })
-                .catch(error => {
-                    console.log('获取图片失败');
-                }));
+        randomPic()
+        .then(url => {
+            client.channels.get('545441874148851722').send(url);
+        })
+        .catch(error => {
+            client.channels.get('545441874148851722').send('获取图片失败');
+        });
         }
 });
 

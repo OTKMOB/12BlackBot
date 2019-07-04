@@ -104,6 +104,9 @@ client.on('message', message => {
                                 nsfw.send(link);
                             }
                         }
+                        else {
+                            message.reply('当前获取的帖子没有媒体信息，请再试一次');
+                        }
                     })
         .catch(error => console.log(error));
     }
@@ -127,6 +130,9 @@ client.on('message', message => {
                             else {
                                 perfect.send(link);
                             }
+                        }
+                        else {
+                            message.reply('当前获取的帖子没有媒体信息，请再试一次');
                         }
                     })
         .catch(error => console.log(error));

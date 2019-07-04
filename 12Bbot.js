@@ -91,6 +91,7 @@ client.on('message', message => {
         }
         musakui('Overwatch_Porn')
         .then(result => {
+                        console.log(result);
                         if(result.hasOwnProperty('media_url')) {
                             let link = result.media_url;
                             if(link.endsWith('.jpg')) {

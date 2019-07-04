@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const musakui = require('musakui');
-const redditimage = require('redditimage');
 
 const client = new Discord.Client();
 
@@ -144,12 +143,6 @@ client.on('message', message => {
                             message.reply('当前获取的帖子没有媒体信息，请再试一次');
                         }
                     })
-        .catch(error => console.log(error));
-    }
-
-    if(message.content === '!test') {
-        redditimage('hentai')
-        .then(image => console.log(image))
         .catch(error => console.log(error));
     }
 });

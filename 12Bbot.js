@@ -97,6 +97,7 @@ client.on('message', message => {
                             if(link.endsWith('.webm')) {
                                 let idx = link.indexOf('.webm');
                                 link = link.substring(14, idx);
+                                link = 'https://' + link;
                                 nsfw.send(link);
                             }
                             else {

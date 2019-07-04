@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const randomPic = require('random-puppy');
+const musakui = require('musakui');
 
 const client = new Discord.Client();
 
@@ -110,6 +111,12 @@ client.on('message', message => {
         .catch(error => {
             perfect.send('获取图片失败');
         });
+    }
+
+    if(message.content === '!test') {
+        musakui('aww')
+        .then(result => console.log(result))
+        .catch(error => console.log(error));
     }
 });
  

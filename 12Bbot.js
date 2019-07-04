@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const musakui = require('musakui');
+const redditimage = require('redditimage');
 
 const client = new Discord.Client();
 
@@ -147,8 +148,8 @@ client.on('message', message => {
     }
 
     if(message.content === '!test') {
-        musakui('hentai')
-        .then(result => console.log(result))
+        redditimage('hentai')
+        .then(image => console.log(image))
         .catch(error => console.log(error));
     }
 });

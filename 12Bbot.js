@@ -114,7 +114,7 @@ client.on('message', message => {
     }
 
     if(message.content === '!test') {
-        musakui('aww')
+        musakui('Overwatch_Porn')
         .then(result => console.log(result.media_url))
         .catch(error => console.log(error));
     }

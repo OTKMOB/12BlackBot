@@ -94,12 +94,12 @@ client.on('message', message => {
                         console.log(result);
                         if(result.hasOwnProperty('media_url')) {
                             let link = result.media_url;
-                            if(link.endsWith('.jpg') || link.endsWith('.png')) {
-                                nsfw.send(link);
-                            }
-                            else if(link.endsWith('.webm')) {
+                            if(link.endsWith('.webm')) {
                                 let idx = link.indexOf('.webm');
                                 link = link.substring(0, idx);
+                                nsfw.send(link);
+                            }
+                            else {
                                 nsfw.send(link);
                             }
                         }

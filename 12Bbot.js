@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const randomPic = require('random-puppy');
 const musakui = require('musakui');
 
 const client = new Discord.Client();
@@ -90,16 +89,23 @@ client.on('message', message => {
         if (message.channel != nsfw) {
             message.reply('图片已发送到NSFW频道');
         }
-        randomPic('Overwatch_Porn')
-        .then(url => {
-            nsfw.send(url);
-        })
-        .catch(error => {
-            nsfw.send('获取图片失败');
-        });
+        musakui('Overwatch_Porn')
+        .then(result => {
+                        if(result.hasOwnProperty('media_url')) {
+                            let link = result.media_url;
+                            if(link.endsWith('.jpg')) {
+                                nsfw.send(link);
+                            }
+                            else if(link.endsWith('.webm')) {
+                                let idx = link.indexOf('.webm');
+                                link = link.substring(0, idx);
+                            }
+                        }
+                    })
+        .catch(error => console.log(error));
     }
 
-    if(message.content === '!aww') {
+    /*if(message.content === '!aww') {
         perfect = client.channels.get('575581539241426944');
         if (message.channel != perfect) {
             message.reply('图片已发送到perfect things频道');
@@ -111,7 +117,7 @@ client.on('message', message => {
         .catch(error => {
             perfect.send('获取图片失败');
         });
-    }
+    }*/
 
     if(message.content === '!test') {
         musakui('hentai')

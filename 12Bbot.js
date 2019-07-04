@@ -143,6 +143,12 @@ client.on('message', message => {
                     })
         .catch(error => perfect.send('获取帖子信息失败，请再试一次'));
     }
+
+    if (message.content === '!test') {
+        reddit('hentai')
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
+    }
 });
  
 

@@ -100,6 +100,10 @@ client.on('message', message => {
                                 link = 'https://' + link;
                                 nsfw.send(link);
                             }
+                            else if(link.startsWith('https://v.redd.it/')) {
+                                link = 'Discord不支持直接播放Reddit视频，请点击链接查看: \n' + link; 
+                                nsfw.send(link);
+                            }
                             else {
                                 nsfw.send(link);
                             }
@@ -125,6 +129,10 @@ client.on('message', message => {
                                 let idx = link.indexOf('.webm');
                                 link = link.substring(14, idx);
                                 link = 'https://' + link;
+                                perfect.send(link);
+                            }
+                            else if(link.startsWith('https://v.redd.it/')) {
+                                link = 'Discord不支持直接播放Reddit视频，请点击链接查看: \n' + link; 
                                 perfect.send(link);
                             }
                             else {

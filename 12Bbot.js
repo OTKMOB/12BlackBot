@@ -108,19 +108,29 @@ client.on('message', message => {
         .catch(error => console.log(error));
     }
 
-    /*if(message.content === '!aww') {
+    if(message.content === '!aww') {
         perfect = client.channels.get('575581539241426944');
         if (message.channel != perfect) {
             message.reply('图片已发送到perfect things频道');
         }
-        randomPic('aww')
-        .then(url => {
-            perfect.send(url);
-        })
-        .catch(error => {
-            perfect.send('获取图片失败');
-        });
-    }*/
+        musakui('aww')
+        .then(result => {
+                        console.log(result);
+                        if(result.hasOwnProperty('media_url')) {
+                            let link = result.media_url;
+                            if(link.endsWith('.webm')) {
+                                let idx = link.indexOf('.webm');
+                                link = link.substring(14, idx);
+                                link = 'https://' + link;
+                                perfect.send(link);
+                            }
+                            else {
+                                perfect.send(link);
+                            }
+                        }
+                    })
+        .catch(error => console.log(error));
+    }
 
     if(message.content === '!test') {
         musakui('hentai')

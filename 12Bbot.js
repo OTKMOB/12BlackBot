@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const randomPic = require('random-puppy');
-const reddit = require('reddit.js');
 
 const client = new Discord.Client();
 
@@ -110,12 +109,6 @@ client.on('message', message => {
         })
         .catch(error => {
             perfect.send('获取图片失败');
-        });
-    }
-
-    if(message.content === '!test') {
-        reddit.random('puppy').fetch(function(res) {
-            console.log(res);
         });
     }
 });

@@ -145,7 +145,7 @@ client.on('message', message => {
     }
 
     if (message.content === '!test') {
-        reddit('hentai')
+        musakui('hentai')
   .then(result => console.log(result))
   .catch(error => console.log(error));
     }

@@ -109,10 +109,10 @@ client.on('message', message => {
                             }
                         }
                         else {
-                            message.reply('当前获取的帖子没有媒体信息，请再试一次');
+                            nsfw.send('当前获取的帖子没有媒体信息，请再试一次');
                         }
                     })
-        .catch(error => console.log(error));
+        .catch(error => nsfw.send('获取帖子信息失败，请再试一次'));
     }
 
     if(message.content === '!aww') {
@@ -122,7 +122,6 @@ client.on('message', message => {
         }
         musakui('aww')
         .then(result => {
-                        console.log(result);
                         if(result.hasOwnProperty('media_url')) {
                             let link = result.media_url;
                             if(link.endsWith('.webm')) {
@@ -140,10 +139,10 @@ client.on('message', message => {
                             }
                         }
                         else {
-                            message.reply('当前获取的帖子没有媒体信息，请再试一次');
+                            perfect.send('当前获取的帖子没有媒体信息，请再试一次');
                         }
                     })
-        .catch(error => console.log(error));
+        .catch(error => perfect.send('获取帖子信息失败，请再试一次'));
     }
 });
  

@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const musakui = require('Musakui.js');
+const musakui = require('./Musakui');
 
 const client = new Discord.Client();
 

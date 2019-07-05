@@ -1,4 +1,5 @@
 /* Originally from https://github.com/justluca/Musakui */
+
 /*
 MIT License
 
@@ -83,7 +84,7 @@ function randomPost(sub) {
     if (!is_self) {
       // Get proper media url
       
-      // Modification starts here
+      /* Modification starts here */
       if (url.startsWith('https://v.redd.')) {
         obj.media_url = 'Discord不支持直接播放Reddit视频，请点击链接查看: \n' + data.media.reddit_video.fallback_url;
         
@@ -95,6 +96,7 @@ function randomPost(sub) {
         if (match) {
           obj.media_url = `https://gfycat.com/${match[0]}`;
         }
+
       } else {
         obj.media_url = url;
       }

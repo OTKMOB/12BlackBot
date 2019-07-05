@@ -92,21 +92,7 @@ client.on('message', message => {
         musakui('Overwatch_Porn')
         .then(result => {
                         if(result.hasOwnProperty('media_url')) {
-                            //let link = result.media_url;
                             nsfw.send(result.media_url);
-                            /*if(link.endsWith('.webm')) {
-                                let idx = link.indexOf('.webm');
-                                link = link.substring(14, idx);
-                                link = 'https://' + link;
-                                nsfw.send(link);
-                            }
-                            else if(link.startsWith('https://v.redd.it/')) {
-                                link = 'Discord不支持直接播放Reddit视频，请点击链接查看: \n' + link; 
-                                nsfw.send(link);
-                            }
-                            else {
-                                nsfw.send(link);
-                            }*/
                         }
                         else {
                             nsfw.send('当前获取的帖子没有媒体信息，请再试一次');
@@ -123,21 +109,7 @@ client.on('message', message => {
         musakui('aww')
         .then(result => {
                         if(result.hasOwnProperty('media_url')) {
-                            //let link = result.media_url;
                             perfect.send(result.media_url);
-                            /*if(link.endsWith('.webm')) {
-                                let idx = link.indexOf('.webm');
-                                link = link.substring(14, idx);
-                                link = 'https://' + link;
-                                perfect.send(link);
-                            }
-                            else if(link.startsWith('https://v.redd.it/')) {
-                                link = 'Discord不支持直接播放Reddit视频，请点击链接查看: \n' + link; 
-                                perfect.send(link);
-                            }
-                            else {
-                                perfect.send(link);
-                            }*/
                         }
                         else {
                             perfect.send('当前获取的帖子没有媒体信息，请再试一次');
@@ -146,11 +118,11 @@ client.on('message', message => {
         .catch(error => perfect.send('获取帖子信息失败，请再试一次'));
     }
 
-    if(message.content === "!test") {
+    /*if(message.content === "!test") {
         musakui('aww')
         .then(result => console.log(result.media_url))
         .catch(error => console.log(error));
-    }
+    }*/
 
 });
  

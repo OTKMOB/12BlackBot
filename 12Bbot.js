@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const musakui = require('./Musakui');
-const reddit = require('redditimage');
 
 const client = new Discord.Client();
 
@@ -120,7 +119,6 @@ client.on('message', message => {
     }
 
     if(message.content === "!test") {
-        reddit('Awwnime').then(image => console.log(image)).catch(err => console.log(err));
     }
 
 });

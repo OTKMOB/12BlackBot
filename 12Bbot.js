@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const musakui = require('musakui');
+const musakui = require('Musakui.js');
 
 const client = new Discord.Client();
 
@@ -123,13 +123,13 @@ client.on('message', message => {
         .then(result => {
                         if(result.hasOwnProperty('media_url')) {
                             let link = result.media_url;
-                            if(link.endsWith('.webm')) {
+                            /*if(link.endsWith('.webm')) {
                                 let idx = link.indexOf('.webm');
                                 link = link.substring(14, idx);
                                 link = 'https://' + link;
                                 perfect.send(link);
-                            }
-                            else if(link.startsWith('https://v.redd.it/')) {
+                            }*/
+                            /*else*/ if(link.startsWith('https://v.redd.it/')) {
                                 link = 'Discord不支持直接播放Reddit视频，请点击链接查看: \n' + link; 
                                 perfect.send(link);
                             }
@@ -142,6 +142,12 @@ client.on('message', message => {
                         }
                     })
         .catch(error => perfect.send('获取帖子信息失败，请再试一次'));
+    }
+
+    if(message.content === "!test") {
+        musakui('aww')
+        .then(result => console.log(result.media_url))
+        .catch(error => console.log(error));
     }
 
 });

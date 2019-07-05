@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const musakui = require('./Musakui');
+const reddit = require('redditimage');
 
 const client = new Discord.Client();
 
@@ -118,11 +119,9 @@ client.on('message', message => {
         .catch(error => perfect.send('获取帖子信息失败，请再试一次'));
     }
 
-    /*if(message.content === "!test") {
-        musakui('aww')
-        .then(result => console.log(result.media_url))
-        .catch(error => console.log(error));
-    }*/
+    if(message.content === "!test") {
+        reddit('Awwnime').then(image => console.log(image)).catch(err => console.log(err));
+    }
 
 });
  

@@ -93,13 +93,13 @@ client.on('message', message => {
         .then(result => {
                         if(result.hasOwnProperty('media_url')) {
                             let link = result.media_url;
-                            if(link.endsWith('.webm')) {
+                            /*if(link.endsWith('.webm')) {
                                 let idx = link.indexOf('.webm');
                                 link = link.substring(14, idx);
                                 link = 'https://' + link;
                                 nsfw.send(link);
                             }
-                            else if(link.startsWith('https://v.redd.it/')) {
+                            else*/ if(link.startsWith('https://v.redd.it/')) {
                                 link = 'Discord不支持直接播放Reddit视频，请点击链接查看: \n' + link; 
                                 nsfw.send(link);
                             }

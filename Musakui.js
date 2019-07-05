@@ -83,18 +83,19 @@ function randomPost(sub) {
     if (!is_self) {
       // Get proper media url
       
+      // Modification starts here
       if (url.startsWith('https://v.redd.')) {
         obj.media_url = 'Discord不支持直接播放Reddit视频，请点击链接查看: \n' + data.media.reddit_video.fallback_url;
         
 
-      } /*else if (url.startsWith('https://gfycat.')) {
+      } else if (url.startsWith('https://gfycat.')) {
         const reg = /[^\/]+(?=\/$|$)/;
         const match = reg.exec(url);
 
         if (match) {
           obj.media_url = `https://gfycat.com/${match[0]}`;
         }
-      }*/ else {
+      } else {
         obj.media_url = url;
       }
     }

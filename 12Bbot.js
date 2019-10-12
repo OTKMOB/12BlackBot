@@ -19,7 +19,7 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if (message.content === '!12help') {
-        message.channel.send('https://github.com/YundingWu/12BlackBot/blob/master/README.md');
+        message.channel.send('https://github.com/OTKMOB/12BlackBot/blob/master/README.md');
     }
 
     if (message.content === '今天的十二黑打完了') {
